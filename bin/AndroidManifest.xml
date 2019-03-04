@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fireion.QuikApps"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" >
+    </supports-screens>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.fireion.QuikApps.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.fireion.QuikApps.Panel"
+            android:enabled="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="The process that is keeping the Panel alive" >
+        </service>
+        <service
+            android:name="com.fireion.QuikApps.Data"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.fireion.QuikApps.Configure"
+            android:label="@string/title_activity_configure" >
+        </activity>
+    </application>
+
+</manifest>
